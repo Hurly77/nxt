@@ -1,0 +1,63 @@
+@font-face {
+	font-family: 'Roboto';
+	src: url('../../public/fonts/Roboto-Medium.ttf');
+}
+
+.nav {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	background-image: linear-gradient(#590099, black);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.nav div {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	border: 1px solid black;
+}
+
+.nav a {
+	background-image: linear-gradient(#590099, black);
+	color: rgb(191, 102, 255);
+	text-transform: uppercase;
+	text-align: center;
+	font-family: Roboto;
+	font-size: 12px;
+	text-decoration: none;
+	padding: 5px 0 5px 0;
+	width: 30%;
+}
+
+.nav a:hover {
+	background-image: linear-gradient(#6e0bac, black);
+}
+
+.nav a:nth-child(2) {
+	border-left: 2px solid black;
+	border-right: 2px solid black;
+}
+
+.settings,
+.home {
+	background-image: linear-gradient(#590099, black);
+	border-left: 2px solid black;
+	text-align: center;
+	padding: 3px;
+	color: rgb(191, 102, 255);
+	width: 10%;
+}
+
+.wrap-home {
+	background-image: linear-gradient(#590099, black);
+	border-left: 2px solid black;
+	text-align: center;
+	padding: 3px;
+	color: rgb(191, 102, 255);
+	width: 10%;
+	font-size: x-large;
+}
