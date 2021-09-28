@@ -7,35 +7,41 @@ export default function ClubList() {
 		if (bool) {
 			return (
 				<>
-					<p>{event.dj}</p>
-					<p>{event.genre}</p>
+					<li>{event.dj}</li>
+					<li>{event.genre}</li>
 				</>
 			);
 		} else {
 			return (
 				<>
-					<p>Juke Box Music</p>
-					<p>Customer Favorite</p>
+					<li>Juke Box Music</li>
+					<li>Customer Favorite</li>
 				</>
 			);
 		}
 	};
 
 	return (
-		<div className={styles}>
+		<div className={styles.wrapper}>
 			{CLUBS.map((club) => {
 				return (
-					<div>
+					<div className={styles.club}>
 						<div className={styles.clubHead}>
-							<img
+							<Image
 								src={club.img}
-								width={100}
-								height={100}
+								width={140}
+								height={140}
+								objectFit="cover"
 							/>
-							<h1>{club.name}</h1>
 						</div>
-						<p>{club.hours}</p>
-						{checkForEvent(club.event, club.isEvent)}
+						<div className={styles.clubBody}>
+							<h3>{club.name}</h3>
+							<ul>
+								<li>{club.hours}</li>
+								{checkForEvent(club.event, club.isEvent)}
+							</ul>
+							<input type="checkbox" />
+						</div>
 					</div>
 				);
 			})}
